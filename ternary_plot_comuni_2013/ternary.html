@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Test</title>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src='ternary.js'></script>
+		
+		<style>
+			.canvas {
+				fill: #ddd;
+			}
+		
+			.line_tri {
+				fill: #aaa;
+				stroke: black;
+				stroke-width: 5px;
+			}
+			
+			.line {
+				fill: none;
+				stroke: black;
+				stroke-width: 2px;
+			}
+			
+			.area {
+				opacity: 0.1;
+				stroke: black;
+				stroke-width: 1px;
+			}
+			
+			.gridline {
+				fill: none;
+				stroke: #555;
+				stroke-width: 1px;
+			}
+			
+			circle.point {
+			/*	r: 2;*/
+				fill: red;
+				stroke: black;
+				stroke-width: 1px;
+			}
+			
+			circle.point:hover {
+				fill: blue;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<svg id='chart0'></svg>
+		<script>
+		
+		function row_parse(row) {
+			return [+row['perc_csx'], +row['perc_cdx'], +row['perc_m5s'], +row['tot_voti'], row['comune']];
+		}
+		
+		d3.csv("res_ternary.csv", row_parse, function(error, data) {
+			data = data.sort(function(a, b) { return a[3] - b[3]; });
+			console.log(data[0])
+			console.log(data[1])
+			console.log(data[2])
+		
+			plot_ternary('#chart0', data, 750);
+		});
+		
+		</script>
+	</body>
+</html>

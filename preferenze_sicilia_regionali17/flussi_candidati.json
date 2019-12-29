@@ -1,0 +1,56 @@
+{
+  "CROCETTA": {
+    "FAVA": 7651, 
+    "ROSA": 0, 
+    "MUSUMECI": 39290, 
+    "CANCELLERI": 0, 
+    "BUSALACCHI": 0, 
+    "TOTALE": 164910, 
+    "MICARI": 117969
+  }, 
+  "MARANO": {
+    "FAVA": 894, 
+    "ROSA": 0, 
+    "MUSUMECI": 0, 
+    "CANCELLERI": 0, 
+    "BUSALACCHI": 0, 
+    "TOTALE": 2399, 
+    "MICARI": 1505
+  }, 
+  "FERRO": {
+    "FAVA": 0, 
+    "ROSA": 394, 
+    "MUSUMECI": 0, 
+    "CANCELLERI": 0, 
+    "BUSALACCHI": 0, 
+    "TOTALE": 394, 
+    "MICARI": 0
+  }, 
+  "MICCICH\u00e8": {
+    "FAVA": 2080, 
+    "ROSA": 0, 
+    "MUSUMECI": 69862, 
+    "CANCELLERI": 0, 
+    "BUSALACCHI": 0, 
+    "TOTALE": 101864, 
+    "MICARI": 29922
+  }, 
+  "MUSUMECI": {
+    "FAVA": 0, 
+    "ROSA": 0, 
+    "MUSUMECI": 86878, 
+    "CANCELLERI": 0, 
+    "BUSALACCHI": 145, 
+    "TOTALE": 129292, 
+    "MICARI": 42269
+  }, 
+  "CANCELLERI": {
+    "FAVA": 0, 
+    "ROSA": 0, 
+    "MUSUMECI": 0, 
+    "CANCELLERI": 28264, 
+    "BUSALACCHI": 0, 
+    "TOTALE": 28264, 
+    "MICARI": 0
+  }
+}

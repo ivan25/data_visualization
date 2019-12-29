@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>Test</title>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src='http://0.0.0.0/flusso_sicilia.js'></script>
+		
+		<style>
+			body {
+				font-family: 'Helvetica Neue', Helvetica, Arial;
+				font-size: 10px;  
+				line-height: 20px;
+  				font-weight: 400;
+  				background-color: #E3F2FD;
+			}
+			
+			div#content {
+				width: 70%;
+				margin: auto;
+				padding: 25px;
+				background-color: white;
+				
+				-webkit-box-shadow: 0px 0px 25px 0px rgba(200,200,200,1);
+				-moz-box-shadow: 0px 0px 25px 0px rgba(200,200,200,1);
+				box-shadow: 0px 0px 25px 0px rgba(200,200,200,1);
+			}
+			
+			div#content > div.title {
+				font-size: 35px;
+				font-weight: bold;
+				text-align: center;
+				
+				margin-top: 50px;
+				margin-bottom: 25px;
+			}
+			
+			div#content div.text {
+				text-align: center;
+				margin-bottom: 10px;
+				font-size: 15px;
+			}
+			
+			rect.label_cell {
+				fill: #2E7D32;
+			}
+			
+			text.label_cell {
+				fill: white;
+				font-weight: bold;
+				font-size: 10px;
+			}
+			
+			text.data_cell {
+				fill: black;
+				font-size: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='content'>
+			<div class='title'>Flusso delle preferenze, dal 2012 al 2017</div>
+			<div class='text'>
+				Flusso delle preferenze tra Elezione Reg Sic 2012 e quella 2017.</br>
+				<b>Lettura:</b> ad es: Alcuni candidati nelle liste UDC (Crocetta) 
+					nel 2012 hanno raccolto 19356 preferenze, adesso quelle stesse persone 
+					sono candidati in FI (Musumeci).</br>
+				I rettangoli neri indicano uno spostamento all'interno della stessa area
+					politica, le preferenze all'esterno dei rettangoli indicano preferenze
+					che cambiano campo politico (ad es csx -> cdx).</br>
+				<b>Nota:</b> sono mostrate 440 mila preferenze su un totale di 1.6 milioni
+					di preferenze espresse nel 2012.
+			</div>
+			<svg id='chart0'></svg>
+		</div>
+	
+		<script>
+		
+			d3.json("http://0.0.0.0/flussi_candidati.json", function(error, data_table) {
+		//		draw_matrix(data_table);
+			});
+			
+			d3.json("http://0.0.0.0/flussi_partiti.json", function(error, data_table) {
+				draw_matrix(data_table);
+			});
+			
+		</script>
+	</body>
+</html>
